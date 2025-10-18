@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI Report to PPT Generator</title>
+</head>
+<body>
+    <h1>AI Report to PPT Generator</h1>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+    <form action="/generate" method="post">
+        <label>Topic (optional):</label><br>
+        <input type="text" name="topic" /><br><br>
+        <label>Report text:</label><br>
+        <textarea name="report_text" rows="10" cols="80"></textarea><br><br>
+        <button type="submit">Generate Slides</button>
+    </form>
+    <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
